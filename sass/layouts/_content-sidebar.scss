@@ -1,0 +1,62 @@
+.site {
+	display: block;
+}
+.container {
+	padding: 0 20px;
+}
+
+// .site-header {
+// 	grid-area: header;
+// }
+
+// .site-main {
+// 	grid-area: main;
+// 	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
+// }
+
+// .widget-area {
+// 	grid-area: sidebar;
+// }
+
+// .site-footer {
+// 	grid-area: footer;
+// }
+
+@include lg() {
+	.site {
+		display: block;
+
+		.home-content {
+			width: 100% !important;
+		}
+
+		.content-area {
+			display: flex;
+			padding-top: 30px;
+			padding-bottom: 60px;
+			.site-main {
+				width: 70%;
+			}
+			.widget-area {
+				padding-left: 30px;
+				width: 30%;
+			}
+		}
+		.site-footer {
+			display: flex;
+			justify-content: center;
+			padding: 20px 0;
+			background-color: #fff;
+		}
+	}
+	.container {
+		display: block;
+		width: 100%;
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0;
+	}
+}
+
+@import "no-sidebar";

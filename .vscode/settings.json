@@ -1,0 +1,5 @@
+{
+    "phpcbf.onsave": false,
+    "phpcbf.executablePath": "${workspaceRoot}/vendor/bin/phpcbf.bat",
+    "phpcs.standard": "Wordpress",
+}
