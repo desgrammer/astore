@@ -402,7 +402,8 @@ acronym {
 
 mark,
 ins {
-  background: #fff9c0;
+  background: #1179ba52;
+  padding: 0 10px;
   text-decoration: none; }
 
 big {
@@ -459,10 +460,9 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-  color: #4169e1;
-  text-decoration: none; }
-  a:visited {
-    color: #800080; }
+  color: #117bb9;
+  text-decoration: none;
+  font-weight: 600; }
   a:hover, a:focus, a:active {
     color: #191970; }
   a:focus {
@@ -552,7 +552,21 @@ textarea {
   display: block; }
 
 .container {
-  padding: 0 20px; }
+  padding-left: 20px !important;
+  padding-right: 20px !important; }
+
+.section {
+  display: flex;
+  padding-top: 60px !important;
+  padding-bottom: 60px !important; }
+
+.site-footer .container {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  background-color: #fff;
+  text-align: center;
+  font-size: .7em; }
 
 @media (min-width: 992px) {
   .site {
@@ -568,13 +582,9 @@ textarea {
       .site .content-area .widget-area {
         padding-left: 30px;
         width: 30%; }
-    .site .site-footer {
-      display: flex;
-      justify-content: center;
-      padding: 20px 0;
-      background-color: #fff; }
+    .site .site-footer .container {
+      font-size: .9em; }
   .container {
-    display: block;
     width: 100%;
     max-width: 1200px;
     margin-left: auto;
@@ -594,6 +604,8 @@ textarea {
     .site-header .container .site-branding {
       display: none;
       flex-grow: .3; }
+      .site-header .container .site-branding img {
+        max-width: 130px; }
       .site-header .container .site-branding h1 {
         font-size: 1.5em; }
       .site-header .container .site-branding p {

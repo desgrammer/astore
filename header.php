@@ -29,21 +29,20 @@
 		<div class="container">
 			<div class="site-branding">
 				<?php
-				the_custom_logo();
-				if ( is_front_page() && is_home() ) :
+				if ( has_custom_logo() ) :
+					the_custom_logo();
+				else :
 					?>
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<?php
-				else :
-					?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php
-				endif;
-				$desgrammer_store_description = get_bloginfo( 'description', 'display' );
-				if ( $desgrammer_store_description || is_customize_preview() ) :
-					?>
-					<p class="site-description"><?php echo $desgrammer_store_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-				<?php endif; ?>
+					$desgrammer_store_description = get_bloginfo( 'description', 'display' );
+					if ( $desgrammer_store_description || is_customize_preview() ) :
+						?>
+						<p class="site-description"><?php echo $desgrammer_store_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+						<?php 
+					endif;
+				endif; 
+				?>
 			</div><!-- .site-branding -->
 			<div class="nav-search">
 				<form action="" method="get" autocomplete="off">

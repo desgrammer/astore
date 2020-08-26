@@ -9,8 +9,8 @@
             767: {
                 perView: 1,
                 peek: {
-                    before: 50,
-                    after: 50
+                    before: 30,
+                    after: 30
                 }
             }
         }

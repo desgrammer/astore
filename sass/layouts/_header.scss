@@ -7,6 +7,9 @@
         .site-branding {
             display: none;
             flex-grow: .3;
+            img {
+                max-width: 130px;
+            }
             h1 {
                 font-size: 1.5em;
             }

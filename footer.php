@@ -12,19 +12,21 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'desgrammer-store' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'desgrammer-store' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( '%1$s Theme by %2$s', 'desgrammer-store' ), 'Store', '<a href="https://desgrammer.com">DesGrammer</a>' );
-				?>
-		</div><!-- .site-info -->
+		<div class="container">
+			<div class="site-info">
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'desgrammer-store' ) ); ?>">
+					<?php
+					/* translators: %s: CMS name, i.e. WordPress. */
+					printf( esc_html__( 'Proudly powered by %s', 'desgrammer-store' ), 'WordPress' );
+					?>
+				</a>
+				<span class="sep"> | </span>
+					<?php
+					/* translators: 1: Theme name, 2: Theme author. */
+					printf( esc_html__( '%1$s Theme by %2$s', 'desgrammer-store' ), 'Store', '<a href="https://desgrammer.com">DesGrammer</a>' );
+					?>
+			</div><!-- .site-info -->
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

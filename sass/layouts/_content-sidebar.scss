@@ -2,7 +2,13 @@
 	display: block;
 }
 .container {
-	padding: 0 20px;
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+}
+.section {
+	display: flex;
+	padding-top: 60px !important;
+	padding-bottom: 60px !important;
 }
 
 // .site-header {
@@ -21,6 +27,16 @@
 // .site-footer {
 // 	grid-area: footer;
 // }
+.site-footer {
+	.container {
+		display: flex;
+		justify-content: center;
+		padding: 20px 0;
+		background-color: #fff;
+		text-align: center;
+		font-size: .7em;
+	}
+}
 
 @include lg() {
 	.site {
@@ -43,14 +59,12 @@
 			}
 		}
 		.site-footer {
-			display: flex;
-			justify-content: center;
-			padding: 20px 0;
-			background-color: #fff;
+			.container {
+				font-size: .9em;
+			}
 		}
 	}
 	.container {
-		display: block;
 		width: 100%;
 		max-width: 1200px;
 		margin-left: auto;

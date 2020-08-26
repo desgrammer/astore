@@ -14,7 +14,7 @@
 
 get_header();
 ?>
-<div class="container content-area">
+<div class="content-area">
 	<main id="primary" class="site-main home-content">
 
 		<?php
@@ -28,20 +28,41 @@ get_header();
 				<?php
 			endif; 
 			?>
+			<div class="container">
 				<section class="glide">
 					<div class="glide__track" data-glide-el="track">
 						<ul class="glide__slides">
 							<li class="glide__slide">
-								<img src="http://desgrammer-dev.test/wp-content/uploads/2020/08/bannere-sayur.jpg" alt="">
+								<img src="http://desgrammer-dev.test/wp-content/uploads/2020/08/slider.jpg" alt="">
 							</li>
 							<li class="glide__slide">
-								<img src="http://desgrammer-dev.test/wp-content/uploads/2020/08/bannere-sayur.jpg" alt="">
+								<img src="http://desgrammer-dev.test/wp-content/uploads/2020/08/slider.jpg" alt="">
 							</li>
 							<li class="glide__slide">
-								<img src="http://desgrammer-dev.test/wp-content/uploads/2020/08/bannere-sayur.jpg" alt="">
+								<img src="http://desgrammer-dev.test/wp-content/uploads/2020/08/slider.jpg" alt="">
 							</li>
 						</ul>
 					</div>
+				</section>
+			</div>
+				<section class="product-list container section">
+				<ul class="products">
+					<?php
+						$args = array(
+							'post_type' => 'product',
+							'posts_per_page' => 12
+							);
+						$loop = new WP_Query( $args );
+						if ( $loop->have_posts() ) {
+							while ( $loop->have_posts() ) : $loop->the_post();
+								wc_get_template_part( 'content', 'product' );
+							endwhile;
+						} else {
+							echo __( 'No products found' );
+						}
+						wp_reset_postdata();
+					?>
+				</ul>
 				</section>
 			<?php
 			/* Start the Loop */
