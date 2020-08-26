@@ -228,3 +228,26 @@ if ( ! function_exists( 'desgrammer_store_woocommerce_header_cart' ) ) {
 		<?php
 	}
 }
+
+/**
+ * Woocommerce product Count.
+ *
+ * @return void
+ */
+add_filter( 'loop_shop_columns', 'desgrammer_store_loop_columns', 999 );
+if ( ! function_exists( 'desgrammer_store_loop_columns' ) ) {
+	/**
+	 * Change loop per row Woocommerce Product
+	 *
+	 * @return String
+	 */
+	function desgrammer_store_loop_columns() {
+		if ( is_shop() || is_product_category() ) {
+			$columns = 4;
+		} else {
+			$columns = 6;
+		}
+		return $columns;
+	}
+}
+

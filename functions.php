@@ -146,15 +146,26 @@ function desgrammer_store_scripts() {
 	wp_enqueue_style( 'desgrammer-fontawesome-all-style', get_template_directory_uri() . '/packages/fontawesome/css/all.min.css', array(), DGSTORE_VERSION );
 	wp_enqueue_style( 'desgrammer-fontawesome-duotone-style', get_template_directory_uri() . '/packages/fontawesome/css/duotone.min.css', array(), DGSTORE_VERSION );
 
+	wp_enqueue_script( 'desgrammer-store-anime', get_template_directory_uri() . '/packages/anime/anime.min.js', array(), DGSTORE_VERSION, true );
+	wp_enqueue_script( 'desgrammer-store-astore', get_template_directory_uri() . '/js/astore.js', array( 'jquery', 'desgrammer-store-anime' ), DGSTORE_VERSION, true );
+	wp_localize_script( 
+		'desgrammer-store-astore', 
+		'astore', 
+		array(
+			'ajaxurl'   => admin_url( 'admin-ajax.php' ),
+			'ajaxnonce' => wp_create_nonce( 'ajax-nonce' ),
+		)
+	);
 	wp_enqueue_script( 'desgrammer-store-navigation', get_template_directory_uri() . '/js/navigation.js', array(), DGSTORE_VERSION, true );
 	if ( is_home() && is_front_page() ) {
 		wp_enqueue_script( 'desgrammer-store-glide', 'https://cdn.jsdelivr.net/npm/@glidejs/glide', array(), DGSTORE_VERSION, true );
 		wp_enqueue_script( 'desgrammer-store-slider', get_template_directory_uri() . '/js/slider.js', array( 'jquery' ), DGSTORE_VERSION, true );
 	}
-
+	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	wp_enqueue_script( 'desgrammer-store-facebook', get_template_directory_uri() . '/js/fb.js', array( 'jquery' ), DGSTORE_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'desgrammer_store_scripts' );
 

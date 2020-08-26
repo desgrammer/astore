@@ -30,7 +30,9 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
-<?php wp_footer(); ?>
-
+<?php 
+get_template_part( 'template-parts/fixed-bar' );
+wp_footer(); 
+?>
 </body>
 </html>

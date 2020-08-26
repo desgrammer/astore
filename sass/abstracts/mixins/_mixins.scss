@@ -6,8 +6,8 @@
 }
 
 // Column width with margin
-@mixin column-width($numberColumns: 3) {
-	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+@mixin column-width($numberColumns: 3, $margin__columns: 0) {
+	width: map-get($columns, $numberColumns) - ( ( $margin__columns * ( $numberColumns - 1 ) ) / $numberColumns );
 }
 
 // Small devices

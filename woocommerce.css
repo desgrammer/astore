@@ -50,11 +50,14 @@ ul.products {
   padding: 0;
   width: 100%; }
   ul.products li.product {
-    width: 48.1%;
+    width: 31.99667%;
     display: inline-block;
     list-style: none;
     position: relative;
-    margin-bottom: 2em; }
+    margin-bottom: 2em;
+    vertical-align: top;
+    padding-right: 7px;
+    font-size: .8em; }
     ul.products li.product h2 {
       margin-top: 10px;
       color: #565656;
@@ -73,12 +76,11 @@ ul.products {
       border-radius: 10px;
       color: #fff;
       background-color: #34c6d0;
-      transform: rotate(15deg);
       font-size: .7em; }
     ul.products li.product img {
       display: block; }
     ul.products li.product .button {
-      display: inline-block;
+      display: none;
       margin-top: 15px;
       padding: 8px 15px;
       font-size: .6em;
@@ -88,13 +90,12 @@ ul.products {
 
 @media screen and (min-width: 48em) {
   ul.products li.product {
-    width: 16.96%;
+    width: 16.66%;
     float: left;
-    margin-right: 3.8%; }
+    padding-right: 10px;
+    font-size: 1em; }
     ul.products li.product.first {
       clear: both; }
-    ul.products li.product.last {
-      margin-right: 0; }
     ul.products li.product .onsale {
       font-size: 1em; }
     ul.products li.product .price {
@@ -107,15 +108,15 @@ ul.products {
     float: none;
     width: 100%; }
   ul.products.columns-2 li.product {
-    width: 48.1%; }
+    width: 50%; }
   ul.products.columns-3 li.product {
-    width: 30.79667%; }
+    width: 33.33%; }
   ul.products.columns-4 li.product {
-    width: 22.15%; }
+    width: 25%; }
   ul.products.columns-5 li.product {
-    width: 16.96%; }
+    width: 20%; }
   ul.products.columns-6 li.product {
-    width: 13.49333%; } }
+    width: 16.66%; } }
 
 /**
  * Single product
@@ -147,25 +148,25 @@ ul.products {
         .single-product div.product .woocommerce-product-gallery .flex-control-thumbs li:hover img {
           opacity: 1; }
     .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-2 .flex-control-thumbs li {
-      width: 48.1%; }
+      width: 50%; }
       .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-2 .flex-control-thumbs li:nth-child(2n) {
         margin-right: 0; }
       .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-2 .flex-control-thumbs li:nth-child(2n+1) {
         clear: both; }
     .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-3 .flex-control-thumbs li {
-      width: 30.79667%; }
+      width: 33.33%; }
       .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-3 .flex-control-thumbs li:nth-child(3n) {
         margin-right: 0; }
       .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-3 .flex-control-thumbs li:nth-child(3n+1) {
         clear: both; }
     .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-4 .flex-control-thumbs li {
-      width: 22.15%; }
+      width: 25%; }
       .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-4 .flex-control-thumbs li:nth-child(4n) {
         margin-right: 0; }
       .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-4 .flex-control-thumbs li:nth-child(4n+1) {
         clear: both; }
     .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-5 .flex-control-thumbs li {
-      width: 16.96%; }
+      width: 20%; }
       .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-5 .flex-control-thumbs li:nth-child(5n) {
         margin-right: 0; }
       .single-product div.product .woocommerce-product-gallery.woocommerce-product-gallery--columns-5 .flex-control-thumbs li:nth-child(5n+1) {
@@ -186,13 +187,13 @@ ul.products {
 @media screen and (min-width: 768px) {
   .col2-set .form-row-first {
     float: left;
-    margin-right: 3.8%; }
+    margin-right: 2%; }
   .col2-set .form-row-last {
     float: right;
     margin-right: 0; }
   .col2-set .form-row-first,
   .col2-set .form-row-last {
-    width: 48.1%; } }
+    width: 50%; } }
 
 /**
  * General WooCommerce components

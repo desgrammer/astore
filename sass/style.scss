@@ -91,9 +91,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------- */
 @import "plugins/jetpack/infinite-scroll";
 
-/*--------------------------------------------------------------
-# Utilities
+/* Utilities
 --------------------------------------------------------------*/
+@import "layouts/fixed-bar";
 
 /* Accessibility
 --------------------------------------------- */
