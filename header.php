@@ -46,7 +46,7 @@
 			</div><!-- .site-branding -->
 			<div class="nav-search">
 				<form action="" method="get" autocomplete="off">
-					<input type="text" placeholder="What do you want to search ?">
+					<input type="text" class="header-search" id="headerSearch" placeholder="What do you want to search ?">
 				</form>
 				<div class="search-result">
 					<ul class="search-products">
@@ -65,8 +65,8 @@
 										<?php echo get_the_post_thumbnail( get_the_ID(), array( 100, 100 ) ); ?>
 									</div>
 									<div class="product-content">
-										<h4><?php echo the_title(); ?></h4>
-										<span><?php echo get_woocommerce_currency_symbol() . get_post_meta( get_the_ID(), '_regular_price' , true) ?></span>
+										<h4><?php echo esc_attr( the_title() ); ?></h4>
+										<span><?php echo esc_attr( get_woocommerce_currency_symbol() ) . esc_attr( get_post_meta( get_the_ID(), '_regular_price', true ) ); ?></span>
 									</div>
 								</li>
 								<?php 

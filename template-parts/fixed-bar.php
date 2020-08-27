@@ -6,6 +6,7 @@
  *
  * @package Desgrammer_Store
  */
+
 ?>
 <section class="fixed-bar">
 	<div class="con-effect">

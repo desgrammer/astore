@@ -242,12 +242,25 @@ if ( ! function_exists( 'desgrammer_store_loop_columns' ) ) {
 	 * @return String
 	 */
 	function desgrammer_store_loop_columns() {
-		if ( is_shop() || is_product_category() ) {
-			$columns = 4;
-		} else {
+		if ( is_home() || is_shop() || is_product() ) {
 			$columns = 6;
+		} else {
+			$columns = 4;
 		}
 		return $columns;
+	}
+}
+
+add_action( 'woocommerce_before_main_content', 'remove_sidebar' );
+
+/**
+ * Remove sidebar on Shop Page and single page Woocommerce
+ *
+ * @return void
+ */
+function remove_sidebar() {
+	if ( is_shop() || is_product() ) { 
+		remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 	}
 }
 

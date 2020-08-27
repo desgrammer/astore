@@ -1,4 +1,5 @@
 .search-result {
+    display: none;
     position: absolute;
     width: 100%;
     z-index: 1030;
@@ -9,7 +10,13 @@
         box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.062);
     }
 
+    & img {
+        max-width: 40px;
+    }
+
     & li {
+        display: inline-block;
+        width: 100%;
         padding: 15px 20px;
     }
     
@@ -20,4 +27,7 @@
     & .product-content {
         padding-left: 15px;
     }
+}
+
+@include lg() {
 }

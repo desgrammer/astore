@@ -1,6 +1,7 @@
 (function () {
     new Glide('.glide', {
         type: 'carousel',
+        autoplay: 3000,
         peek: {
             before: 200,
             after: 200

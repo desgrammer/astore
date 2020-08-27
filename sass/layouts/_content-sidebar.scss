@@ -56,12 +56,14 @@
 			display: flex;
 			padding-top: 30px;
 			padding-bottom: 60px;
-			.site-main {
-				width: 70%;
+
+			& > * {
+				flex-grow: 1;
 			}
+
 			.widget-area {
 				padding-left: 30px;
-				width: 30%;
+				width: 35%;
 			}
 		}
 		.site-footer {

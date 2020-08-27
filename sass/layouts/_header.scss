@@ -29,9 +29,11 @@
 
         .main-navigation {
             .menu-toggle {
-
+                padding: 13px 18px;
+                background-color: #efefef;
             }
             .cart-toggle {
+                display: none;
                 background-color: transparent;
                 border: 0;
                 padding-left: 25px;
@@ -53,6 +55,9 @@
                 }
                 .menu-toggle {
                     padding: 13px 15px;
+                }
+                .cart-toggle {
+                    display: block;
                 }
             }
         }
