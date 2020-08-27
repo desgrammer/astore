@@ -46,6 +46,9 @@ get_header();
 				</section>
 			</div>
 				<section class="product-list container section">
+				<div class="section-title">
+					<h2>Product Lists</h2>
+				</div>
 				<ul class="products">
 					<?php
 						$args = array(

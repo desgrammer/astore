@@ -48,6 +48,36 @@
 				<form action="" method="get" autocomplete="off">
 					<input type="text" placeholder="What do you want to search ?">
 				</form>
+				<div class="search-result">
+					<ul class="search-products">
+					<?php
+						$args = array(
+							'post_type'      => 'product',
+							'posts_per_page' => 3,
+						);
+						$loop = new WP_Query( $args );
+						if ( $loop->have_posts() ) {
+							while ( $loop->have_posts() ) : 
+								$loop->the_post(); 
+								?>
+								<li>
+									<div class="product-image">
+										<?php echo get_the_post_thumbnail( get_the_ID(), array( 100, 100 ) ); ?>
+									</div>
+									<div class="product-content">
+										<h4><?php echo the_title(); ?></h4>
+										<span><?php echo get_woocommerce_currency_symbol() . get_post_meta( get_the_ID(), '_regular_price' , true) ?></span>
+									</div>
+								</li>
+								<?php 
+							endwhile;
+						} else {
+							echo esc_html( 'No products found' );
+						}
+						wp_reset_postdata();
+						?>
+					</ul>
+				</div>
 			</div>
 			<nav id="site-navigation" class="main-navigation">
 			<button class="cart-toggle"><i class="fad fa-shopping-cart"></i></button>

@@ -557,8 +557,14 @@ textarea {
 
 .section {
   display: flex;
+  flex-wrap: wrap;
   padding-top: 60px !important;
   padding-bottom: 60px !important; }
+
+.section-title {
+  display: block;
+  width: 100%;
+  padding-bottom: 30px; }
 
 .site-footer .container {
   display: flex;
@@ -611,6 +617,7 @@ textarea {
       .site-header .container .site-branding p {
         font-size: .8em; }
     .site-header .container .nav-search {
+      position: relative;
       flex-grow: 1; }
       .site-header .container .nav-search input {
         width: 100%;
@@ -738,6 +745,22 @@ textarea {
     .widget_search .search-form label input[type=search] {
       width: 100%;
       padding: 7px 10px; }
+
+.search-result {
+  position: absolute;
+  width: 100%;
+  z-index: 1030; }
+  .search-result .search-products {
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.062); }
+  .search-result li {
+    padding: 15px 20px; }
+  .search-result .product-image, .search-result .product-content {
+    display: inline-block;
+    vertical-align: middle; }
+  .search-result .product-content {
+    padding-left: 15px; }
 
 /* Media
 --------------------------------------------- */

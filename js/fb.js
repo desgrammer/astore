@@ -2,13 +2,10 @@
     $.ajaxSetup({
         cache: true
     });
-    $.getScript('https://connect.facebook.net/en_US/sdk.js', function () {
-        FB.getLoginStatus((response) => {
-            if (response.status != 'connected') {
-                FB.login((response) => {
-                    console.log(response);
-                })
-            }
+    $.getScript('https://connect.facebook.net/id_ID/sdk.js', function () {
+        FB.init({
+            appId: '356119118729500',
+            version: 'v2.7'
         });
     });
 })(jQuery)

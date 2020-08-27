@@ -7,8 +7,14 @@
 }
 .section {
 	display: flex;
+	flex-wrap: wrap;
 	padding-top: 60px !important;
 	padding-bottom: 60px !important;
+}
+.section-title {
+	display: block;
+	width: 100%;
+	padding-bottom: 30px;
 }
 
 // .site-header {
