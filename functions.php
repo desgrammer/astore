@@ -202,3 +202,15 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/**
+ * Remove product search in search Query
+ */
+function searchfilter( $query ) {
+	if ( $query->is_search && !is_admin() ) {
+		$query->set( 'post_type', 'post' );
+	}
+	return $query;
+}
+
+add_filter( 'pre_get_posts', 'searchfilter' );

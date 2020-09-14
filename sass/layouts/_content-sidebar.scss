@@ -16,23 +16,30 @@
 	width: 100%;
 	padding-bottom: 30px;
 }
+.no-results {
+	display: flex;
+	flex-direction: column;
+	height: 400px;
+	justify-content: center;
+	align-items: center;
 
-// .site-header {
-// 	grid-area: header;
-// }
+	& .page-content {
+		margin: 0;
+	}
 
-// .site-main {
-// 	grid-area: main;
-// 	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
-// }
+	& .search-form {
+		margin-top: 20px;
+	}
 
-// .widget-area {
-// 	grid-area: sidebar;
-// }
+	& input[type=search] {
+		width: 75%;
+		padding: 10px 20px;
+	}
 
-// .site-footer {
-// 	grid-area: footer;
-// }
+	& .search-submit {
+		padding: 14px 20px;
+	}
+}
 .site-footer {
 	.container {
 		display: flex;
@@ -78,6 +85,11 @@
 		margin-left: auto;
 		margin-right: auto;
 		padding: 0;
+	}
+	.no-results {
+		& input[type=search] {
+			width: 85%;
+		}
 	}
 }
 
