@@ -71,7 +71,7 @@ ul.products {
     ul.products li.product .onsale {
       position: absolute;
       top: -10px;
-      right: -10px;
+      right: 0;
       padding: 5px 15px;
       border-radius: 10px;
       color: #fff;

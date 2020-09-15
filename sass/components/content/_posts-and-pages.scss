@@ -16,3 +16,25 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+.entry-footer {
+	margin-top: 30px;
+
+	.comments-link a, .cat-links a {
+		padding: 5px 10px;
+		border-radius: 5px;
+		font-size: .7em;
+	}
+	
+	.cat-links a {
+		@include background-opacity($color__secondary, 0.1);
+	}
+	
+	.comments-link {
+		margin-left: 40px;
+
+		& > a {
+			@include background-opacity($color__secondary, 0.2);
+		}
+	}
+}

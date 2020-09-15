@@ -214,3 +214,19 @@ function searchfilter( $query ) {
 }
 
 add_filter( 'pre_get_posts', 'searchfilter' );
+
+/**
+ * Remove field in wordpress comments
+ */
+
+if ( ! function_exists( 'customize_fields' ) ) {
+	function customize_fields( $fields ) {
+		$fields['comment'] = '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required" placeholder="Enter comments"></textarea></p>';
+		$fields['author'] = '<p class="comment-form-author"><input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required" placeholder="Name"></p>';
+		$fields['email'] = '<p class="comment-form-email"><input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required" placeholder="Email"></p>';
+		unset( $fields['url'] );
+
+		return $fields;
+	}
+}
+add_filter( 'comment_form_fields', 'customize_fields' );

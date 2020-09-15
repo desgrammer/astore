@@ -19,7 +19,7 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-
+<hr class="comment-separator" />
 <div id="comments" class="comments-area">
 
 	<?php

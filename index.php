@@ -47,6 +47,7 @@ get_header();
 			</div>
 				<section class="product-list container section">
 				<div class="section-title">
+					<h1 class="bg-text">Product Lists</h1>
 					<h2>Product Lists</h2>
 				</div>
 				<ul class="products">
