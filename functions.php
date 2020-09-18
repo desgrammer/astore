@@ -48,11 +48,11 @@ if ( ! function_exists( 'desgrammer_store_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus(
-			array(
-				'menu-1' => esc_html__( 'Primary', 'desgrammer-store' ),
-			)
-		);
+		// register_nav_menus(
+		// 	array(
+		// 		'menu-1' => esc_html__( 'Primary', 'desgrammer-store' ),
+		// 	)
+		// );
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -121,20 +121,20 @@ add_action( 'after_setup_theme', 'desgrammer_store_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function desgrammer_store_widgets_init() {
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Sidebar', 'desgrammer-store' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'desgrammer-store' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-}
-add_action( 'widgets_init', 'desgrammer_store_widgets_init' );
+// function desgrammer_store_widgets_init() {
+// 	register_sidebar(
+// 		array(
+// 			'name'          => esc_html__( 'Sidebar', 'desgrammer-store' ),
+// 			'id'            => 'sidebar-1',
+// 			'description'   => esc_html__( 'Add widgets here.', 'desgrammer-store' ),
+// 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+// 			'after_widget'  => '</section>',
+// 			'before_title'  => '<h2 class="widget-title">',
+// 			'after_title'   => '</h2>',
+// 		)
+// 	);
+// }
+// add_action( 'widgets_init', 'desgrammer_store_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
@@ -146,7 +146,7 @@ function desgrammer_store_scripts() {
 	wp_enqueue_style( 'desgrammer-fontawesome-all-style', get_template_directory_uri() . '/packages/fontawesome/css/all.min.css', array(), DGSTORE_VERSION );
 	wp_enqueue_style( 'desgrammer-fontawesome-duotone-style', get_template_directory_uri() . '/packages/fontawesome/css/duotone.min.css', array(), DGSTORE_VERSION );
 
-	wp_enqueue_script( 'desgrammer-store-navigation', get_template_directory_uri() . '/js/navigation.js', array(), DGSTORE_VERSION, true );
+	// wp_enqueue_script( 'desgrammer-store-navigation', get_template_directory_uri() . '/js/navigation.js', array(), DGSTORE_VERSION, true );
 	if ( is_home() && is_front_page() ) {
 		wp_enqueue_script( 'desgrammer-store-glide', 'https://cdn.jsdelivr.net/npm/@glidejs/glide', array(), DGSTORE_VERSION, true );
 		wp_enqueue_script( 'desgrammer-store-slider', get_template_directory_uri() . '/js/slider.js', array( 'jquery' ), DGSTORE_VERSION, true );
